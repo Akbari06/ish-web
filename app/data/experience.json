@@ -1,0 +1,36 @@
+[
+  {
+    "range": "Sep 2025 — Present",
+    "title": "Computer Science Lead · Manchester MedTech Society",
+    "points": [
+      "Led a 4 week Python and AI course for 50+ medical students, enabling teams to build healthcare focused software tools.",
+      "Mentored hackathon teams applying data analysis and automation to clinical innovation, achieving 90%+ attendance and feedback."
+    ]
+  },
+  {
+    "range": "May 2025 — Sep 2025",
+    "title": "Undergraduate Research Assistant · University of Manchester",
+    "points": [
+      "Conducted NLP research on script subtitle alignment for diarisation under Prof Batista Navarro.",
+      "Improved alignment accuracy from 73% to 81% across 62 BBC episodes using refined fuzzy matching techniques.",
+      "Built Python tools for preprocessing, tokenization, and similarity scoring to streamline data workflows."
+    ]
+  },
+  {
+    "range": "Apr 2025",
+    "title": "Spring into Software Engineering · JPMorgan Chase",
+    "points": [
+      "Worked in a Scrum team during Code for Good, contributing to cloud based features for a nonprofit partner.",
+      "Selected from 12,500+ applicants and received a return offer for a 2026 Software Engineering Summer Analyst role."
+    ]
+  },
+  {
+    "range": "Apr 2025",
+    "title": "Spring into Banking - Technology, Data and Innovation · Deutsche Bank",
+    "points": [
+      "Achieved 2nd highest P&L in a capital flow trading simulation during Technology in Investment Banking training.",
+      "Selected from approximately 10,000 applicants for exposure to UI development and machine learning in TDI."
+    ]
+  }
+]
+

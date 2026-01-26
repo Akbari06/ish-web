@@ -1,0 +1,38 @@
+[
+  {
+    "tag": "Great Uni Hack",
+    "title": "WellWorld - 1st Place Winner",
+    "github": "https://github.com/Akbari06/wellworld",
+    "points": [
+      "Global volunteering platform with real time collaboration and an interactive 3D globe interface.",
+      "Stack: React, Globe.gl, FastAPI, Supabase, Gemini AI."
+    ]
+  },
+  {
+    "tag": "ODSC x Google Cloud Hackathon",
+    "title": "StoryGrow - 2nd Place Winner",
+    "github": "https://github.com/Akbari06/storygrow",
+    "points": [
+      "Agent based AI system generating illustrated stories from user input.",
+      "Stack: FastAPI, Gemini API, Next.js, Google Cloud, Firebase."
+    ]
+  },
+  {
+    "tag": "J.P. Morgan Code for Good Hackathon",
+    "title": "PathMatch",
+    "github": "https://github.com/Akbari06/pathmatch",
+    "points": [
+      "AI guided onboarding and mentor matching platform for a UK nonprofit.",
+      "Stack: React, Django, Gemini API, SQLite."
+    ]
+  },
+  {
+    "tag": "Systems",
+    "title": "Linux Scheduler Latency",
+    "github": "https://github.com/Akbari06/sched-latency",
+    "points": [
+      "C library measuring Linux scheduler wake up latency and jitter under contention.",
+      "Stack: C, pthreads, CLOCK_MONOTONIC_RAW."
+    ]
+  }
+]
