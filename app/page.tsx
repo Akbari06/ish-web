@@ -127,7 +127,7 @@ export default function Home() {
         </div>
       )}
 
-      <section className="tabs" id="tabs" aria-label="Portfolio tabs">
+      <section className="tabs" id="tabs" aria-label="Portfolio tabs" style={{ display: activeTab === "" ? "none" : "block" }}>
         <div className="tabPanels">
           <div
             id="experience"
