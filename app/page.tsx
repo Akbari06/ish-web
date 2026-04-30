@@ -49,7 +49,7 @@ export default function Home() {
 </p>
 
 <p>
-  Founded MathsWithIsh, a platform with 300k+ views helping A level students improve from C or D to A or A* in Maths / Further Maths.
+  Founded MathsWithIsh, a platform with 300k+ views helping A level students improve from C / D to A / A* in Maths / Further Maths.
 </p>
 
 <p>

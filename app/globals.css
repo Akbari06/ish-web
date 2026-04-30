@@ -102,12 +102,12 @@ header {
 
 .hero {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
   align-items: center;
-  padding: 32px;
+  padding: 20px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
-  border-radius: 28px;
+  border-radius: 20px;
   border: 1px solid var(--stroke);
   position: relative;
   overflow: hidden;
@@ -172,7 +172,7 @@ header {
 .heroVisual {
   display: grid;
   place-items: center;
-  min-height: 400px;
+  min-height: 240px;
   position: relative;
 }
 
