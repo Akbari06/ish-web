@@ -2,7 +2,6 @@ import "./globals.css";
 
 export const metadata = {
   title: "Ishtiaque's Portfolio",
-  description: "Personal dev/tech portfolio site",
   icons: {
     icon: "/icon.svg"
   }
