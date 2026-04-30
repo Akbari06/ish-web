@@ -7,9 +7,10 @@ import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight";
 import AnoAI from "@/components/ui/animated-shader-background";
 import { Sun, Moon } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState("experience");
+  const [activeTab, setActiveTab] = useState("");
   const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
@@ -46,7 +47,12 @@ export default function Home() {
               className={`tabButton ${activeTab === tab ? "active" : ""}`}
               role="tab"
               aria-selected={activeTab === tab}
-              onClick={() => setActiveTab(tab)}
+              onClick={() => {
+                setActiveTab(tab);
+                setTimeout(() => {
+                  document.getElementById("tabs")?.scrollIntoView({ behavior: "smooth" });
+                }, 10);
+              }}
               type="button"
             >
               {tab === "experience" ? "Exp." : tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -88,6 +94,21 @@ export default function Home() {
         </div>
       </section>
 
+      <div style={{
+        borderRadius: '24px',
+        overflow: 'hidden',
+        border: '1px solid var(--stroke)',
+        boxShadow: 'var(--shadow)',
+      }}>
+        <Image
+          src="/collage.jpg"
+          alt="collage"
+          width={3000}
+          height={3000}
+          style={{ width: '100%', height: 'auto', display: 'block' }}
+          draggable={false}
+        />
+      </div>
 
       <section className="tabs" id="tabs" aria-label="Portfolio tabs">
         <div className="tabPanels">
@@ -109,6 +130,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
+
           </div>
 
           <div

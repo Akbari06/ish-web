@@ -325,6 +325,11 @@ footer {
   font-size: 12px;
 }
 
+@keyframes scrollY {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
 @keyframes slideDown {
   from {
     opacity: 0;
