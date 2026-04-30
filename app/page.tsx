@@ -59,10 +59,14 @@ export default function Home() {
               role="tab"
               aria-selected={activeTab === tab}
               onClick={() => {
-                setActiveTab(tab);
-                setTimeout(() => {
-                  document.getElementById("tabs")?.scrollIntoView({ behavior: "smooth" });
-                }, 10);
+                if (activeTab === tab) {
+                  setActiveTab("");
+                } else {
+                  setActiveTab(tab);
+                  setTimeout(() => {
+                    document.getElementById("tabs")?.scrollIntoView({ behavior: "smooth" });
+                  }, 10);
+                }
               }}
               type="button"
             >
@@ -105,21 +109,23 @@ export default function Home() {
         </div>
       </section>
 
-      <div style={{
-        borderRadius: '24px',
-        overflow: 'hidden',
-        border: '1px solid var(--stroke)',
-        boxShadow: 'var(--shadow)',
-      }}>
-        <Image
-          src="/collage.jpg"
-          alt="collage"
-          width={3000}
-          height={3000}
-          style={{ width: '100%', height: 'auto', display: 'block' }}
-          draggable={false}
-        />
-      </div>
+      {activeTab === "" && (
+        <div style={{
+          borderRadius: '24px',
+          overflow: 'hidden',
+          border: '1px solid var(--stroke)',
+          boxShadow: 'var(--shadow)',
+        }}>
+          <Image
+            src="/collage.jpg"
+            alt="collage"
+            width={3000}
+            height={3000}
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+            draggable={false}
+          />
+        </div>
+      )}
 
       <section className="tabs" id="tabs" aria-label="Portfolio tabs">
         <div className="tabPanels">
