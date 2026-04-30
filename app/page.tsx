@@ -85,15 +85,15 @@ export default function Home() {
         <div className="heroCopy">
           <h1>Novelty Lover</h1>
           <p>
-  CS and Maths student at the University of Manchester, incoming Software Engineering Intern at Google and Amazon.
+  CS & Maths student @ University of Manchester, incoming SWE Intern at Google and Amazon.
 </p>
 
 <p>
-  Founded MathsWithIsh, a platform with 300k+ views helping A level students improve from C / D to A / A* in Maths.
+  I build things that get used, from MathsWithIsh (300k+ views) helping A level students jump from C/D to A/A*, to leading a Python and AI course at Manchester MedTech that led to the largest student led MedTech hackathon in the North of England.
 </p>
 
 <p>
-  As CS Lead at Manchester MedTech, delivered a four week Python and AI course that led to a sold out hackathon in under 12 hours, the largest student led MedTech event in the North of England.
+  Outside of that, I spend a lot of time at hackathons (5x winner), travelling, going on long walks, and tinkering with new ideas, usually turning them into projects.
 </p>
 
         </div>
