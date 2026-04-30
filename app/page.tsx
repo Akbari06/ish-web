@@ -4,11 +4,18 @@ import { useState } from "react";
 import experience from "./data/experience.json";
 import projects from "./data/projects.json";
 import faqs from "./data/faqs.json";
+import { SplineScene } from "@/components/ui/splite";
+import { Spotlight } from "@/components/ui/spotlight";
+import AnoAI from "@/components/ui/animated-shader-background";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("experience");
 
   return (
+    <>
+      <div style={{ position: 'fixed', inset: 0, zIndex: -1, opacity: 0.35, pointerEvents: 'none' }}>
+        <AnoAI />
+      </div>
     <div className="page">
       <header>
           <div className="logo">
@@ -35,90 +42,30 @@ export default function Home() {
       </header>
 
       <section className="hero">
+        <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
         <div className="heroCopy">
-          <div className="meta">Portfolio · dev/tech</div>
-          <h1>An Enjoyer of Novelty</h1>
+          <h1>Novelty Lover</h1>
           <p>
-  Founded MathsWithIsh, a platform with 300k+ views helping A level students excel in Maths and Further Maths, with many improving from C/D to A/A*.
+  CS and Maths student at the University of Manchester, incoming Software Engineering Intern at Google and Amazon.
 </p>
 
 <p>
-  As CS Lead @ Manchester MedTech, the #1 ranked student society, I led a 4 week course teaching Python and AI tools like Claude to help medical students build impactful software.
+  Founded MathsWithIsh, a platform with 300k+ views helping A level students improve from C or D to A or A* in Maths / Further Maths.
 </p>
 
 <p>
-  The course helped lead to a sold out Manchester MedTech hackathon, with tickets sold out under 12 hours, making it the largest student led MedTech hackathon in North of England.
+  As CS Lead at Manchester MedTech, delivered a four week Python and AI course that led to a sold out hackathon in under 12 hours, the largest student led MedTech event in the North of England.
 </p>
 
-<p>
-  I enjoy working across diverse projects, from hackathon winning charity platforms to low level systems work in C.
-</p>
-
-          <div className="heroActions">
-            <a
-              className="btn primary"
-              href="#tabs"
-              onClick={(event) => {
-                event.preventDefault();
-                setActiveTab("contact");
-                document.getElementById("tabs")?.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              Contact me
-            </a>
-            <a
-              className="btn"
-              href="#tabs"
-              onClick={(event) => {
-                event.preventDefault();
-                setActiveTab("projects");
-                document.getElementById("tabs")?.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              View projects
-            </a>
-          </div>
         </div>
         <div className="heroVisual">
-          <div className="portrait" aria-hidden="true">
-            <svg viewBox="0 0 200 200" fill="none">
-              <defs>
-                <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stopColor="#6ee7ff" />
-                  <stop offset="1" stopColor="#ffd166" />
-                </linearGradient>
-              </defs>
-              <circle cx="100" cy="100" r="74" stroke="url(#stroke)" strokeWidth="2" />
-              <path
-                d="M70 120c10 16 24 26 44 26s34-10 46-28"
-                stroke="#d5dbe2"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-              <path
-                d="M70 86c8-20 22-30 42-30 24 0 40 12 48 36"
-                stroke="#8b97a3"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-              <circle cx="86" cy="100" r="6" fill="#d5dbe2" />
-              <circle cx="120" cy="100" r="6" fill="#d5dbe2" />
-              <path
-                d="M50 140h100"
-                stroke="#212a33"
-                strokeWidth="10"
-                strokeLinecap="round"
-              />
-              <path
-                d="M60 60h20M120 60h20"
-                stroke="#6ee7ff"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
-          </div>
+          <SplineScene
+            scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+            className="w-full h-full"
+          />
         </div>
       </section>
+
 
       <section className="tabs" id="tabs" aria-label="Portfolio tabs">
         <div className="tabPanels">
@@ -206,7 +153,9 @@ export default function Home() {
         </div>
       </section>
 
-      
+
     </div>
+
+    </>
   );
 }
