@@ -3,7 +3,6 @@
 import { useState } from "react";
 import experience from "./data/experience.json";
 import projects from "./data/projects.json";
-import faqs from "./data/faqs.json";
 import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight";
 import AnoAI from "@/components/ui/animated-shader-background";
@@ -26,7 +25,7 @@ export default function Home() {
           </div>
         </div>
         <div className="topTabs" role="tablist" aria-label="Portfolio sections">
-          {["experience", "projects", "faq", "contact"].map((tab) => (
+          {["experience", "projects", "contact"].map((tab) => (
             <button
               key={tab}
               className={`tabButton ${activeTab === tab ? "active" : ""}`}
@@ -109,24 +108,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            id="faq"
-            className={`tabPanel ${activeTab === "faq" ? "active" : ""}`}
-            role="tabpanel"
-          >
-            <div className="grid">
-              {faqs.map((faq) => (
-                <div className="card" key={faq.question}>
-                  <h3>{faq.question}</h3>
-                  <div className="list">
-                    <div>{faq.answer}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div
+<div
             id="contact"
             className={`tabPanel ${activeTab === "contact" ? "active" : ""}`}
             role="tabpanel"
