@@ -290,9 +290,30 @@ header {
 
 .card {
   padding: 18px;
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  background: rgba(255, 255, 255, 0.04);
   border-radius: 18px;
-  border: 1px solid var(--stroke);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: url("#glass-filter") blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 6px rgba(0,0,0,0.03),
+    0 2px 6px rgba(0,0,0,0.08),
+    inset 1px 1px 1px -0.5px rgba(255,255,255,0.3),
+    inset -1px -1px 1px -0.5px rgba(255,255,255,0.1),
+    inset 0 0 6px 6px rgba(255,255,255,0.04),
+    0 0 12px rgba(255,255,255,0.05);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 0 6px rgba(0,0,0,0.03),
+    0 4px 12px rgba(0,0,0,0.12),
+    inset 1px 1px 1px -0.5px rgba(255,255,255,0.4),
+    inset -1px -1px 1px -0.5px rgba(255,255,255,0.15),
+    inset 0 0 6px 6px rgba(255,255,255,0.06),
+    0 0 20px rgba(255,255,255,0.08);
 }
 
 .card h3 {
