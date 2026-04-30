@@ -39,26 +39,6 @@ export default function Home() {
             <div className="logoMeta">Software Engineer</div>
           </div>
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-        <button
-          onClick={toggleTheme}
-          style={{
-            background: "transparent",
-            border: "1px solid var(--stroke)",
-            borderRadius: "999px",
-            padding: "8px",
-            cursor: "pointer",
-            color: "var(--text)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            transition: "all 0.2s ease",
-          }}
-          aria-label="Toggle theme"
-        >
-          {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
-        </button>
-        </div>
         <div className="topTabs" role="tablist" aria-label="Portfolio sections">
           {["experience", "projects", "contact"].map((tab) => (
             <button
@@ -72,6 +52,14 @@ export default function Home() {
               {tab.charAt(0).toUpperCase() + tab.slice(1)}
             </button>
           ))}
+          <button
+            onClick={toggleTheme}
+            className="tabButton"
+            aria-label="Toggle theme"
+            style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "10px 12px" }}
+          >
+            {theme === "dark" ? <Sun size={14} /> : <Moon size={14} />}
+          </button>
         </div>
       </header>
 
