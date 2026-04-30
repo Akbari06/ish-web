@@ -1,14 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import experience from "./data/experience.json";
 import projects from "./data/projects.json";
 import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight";
 import AnoAI from "@/components/ui/animated-shader-background";
+import { Sun, Moon } from "lucide-react";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("experience");
+  const [theme, setTheme] = useState("dark");
+
+  useEffect(() => {
+    const saved = localStorage.getItem("theme") || "dark";
+    setTheme(saved);
+    document.documentElement.setAttribute("data-theme", saved);
+  }, []);
+
+  const toggleTheme = () => {
+    const next = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+  };
 
   return (
     <>
@@ -23,6 +38,26 @@ export default function Home() {
             <div>Ishtiaque Akbar</div>
             <div className="logoMeta">Software Engineer</div>
           </div>
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+        <button
+          onClick={toggleTheme}
+          style={{
+            background: "transparent",
+            border: "1px solid var(--stroke)",
+            borderRadius: "999px",
+            padding: "8px",
+            cursor: "pointer",
+            color: "var(--text)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            transition: "all 0.2s ease",
+          }}
+          aria-label="Toggle theme"
+        >
+          {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+        </button>
         </div>
         <div className="topTabs" role="tablist" aria-label="Portfolio sections">
           {["experience", "projects", "contact"].map((tab) => (
@@ -49,7 +84,7 @@ export default function Home() {
 </p>
 
 <p>
-  Founded MathsWithIsh, a platform with 300k+ views helping A level students improve from C / D to A / A* in Maths / Further Maths.
+  Founded MathsWithIsh, a platform with 300k+ views helping A level students improve from C / D to A / A* in Maths.
 </p>
 
 <p>
