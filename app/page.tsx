@@ -49,7 +49,7 @@ export default function Home() {
               onClick={() => setActiveTab(tab)}
               type="button"
             >
-              {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              {tab === "experience" ? "Exp." : tab.charAt(0).toUpperCase() + tab.slice(1)}
             </button>
           ))}
           <button
