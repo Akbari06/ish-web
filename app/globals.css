@@ -129,6 +129,7 @@ header {
   font-size: clamp(2.2rem, 2.8vw + 1.4rem, 3.8rem);
   line-height: 1.1;
   margin-bottom: 16px;
+  font-weight: 800;
 }
 
 .heroCopy p {
