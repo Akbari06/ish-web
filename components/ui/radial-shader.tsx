@@ -200,9 +200,11 @@ function ShaderCanvas({ fragSource, pixelRatio }: { fragSource: string; pixelRat
         canvas.removeEventListener("webglcontextrestored", onContextRestored);
       }
       if (ro) { try { ro.disconnect(); } catch {} ro = null; }
-      if (vbo) { try { gl.deleteBuffer(vbo); } catch {} }
-      if (vao) { try { gl.deleteVertexArray(vao); } catch {} }
-      if (program) { try { gl.deleteProgram(program); } catch {} }
+      if (gl) {
+        if (vbo) { try { gl.deleteBuffer(vbo); } catch {} }
+        if (vao) { try { gl.deleteVertexArray(vao); } catch {} }
+        if (program) { try { gl.deleteProgram(program); } catch {} }
+      }
     }
 
     return cleanup;
