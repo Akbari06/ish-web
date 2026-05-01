@@ -7,11 +7,13 @@ import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight";
 import AnoAI from "@/components/ui/animated-shader-background";
 import { Sun, Moon } from "lucide-react";
+import { TypingEffect } from "@/components/ui/typing-effect";
 import Image from "next/image";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("");
   const [theme, setTheme] = useState("dark");
+  const [phase, setPhase] = useState(0);
 
   useEffect(() => {
     const saved = localStorage.getItem("theme") || "dark";
@@ -87,18 +89,41 @@ export default function Home() {
       <section className="hero">
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
         <div className="heroCopy">
-          <h1>Novelty Lover</h1>
-          <p>
-  CS & Maths student @ University of Manchester, incoming SWE Intern at Google and Amazon.
-</p>
-
-<p>
-  I build things that get used, from MathsWithIsh (300k+ views) helping A level students jump from C/D to A/A*, to leading a Python and AI course at Manchester MedTech that led to the largest student led MedTech hackathon in the North of England.
-</p>
-
-<p>
-  Outside of that, I spend a lot of time at hackathons (5x winner), travelling, going on long walks, and tinkering with new ideas, usually turning them into projects.
-</p>
+          <h1>
+            <TypingEffect
+              texts={["Novelty Lover"]}
+              typingSpeed={80}
+              rotationInterval={999999}
+              onDone={() => setPhase(1)}
+              className="text-left justify-start font-[inherit] text-[inherit]"
+            />
+          </h1>
+          <TypingEffect
+            texts={["CS & Maths student @ University of Manchester, incoming SWE Intern at Google and Amazon."]}
+            typingSpeed={40}
+            rotationInterval={999999}
+            active={phase >= 1}
+            onDone={() => setPhase(2)}
+            block
+            className="para"
+          />
+          <TypingEffect
+            texts={["I build things that get used, from MathsWithIsh (300k+ views) helping A level students jump from C/D to A/A*, to leading a Python and AI course at Manchester MedTech that led to the largest student led MedTech hackathon in the North of England."]}
+            typingSpeed={40}
+            rotationInterval={999999}
+            active={phase >= 2}
+            onDone={() => setPhase(3)}
+            block
+            className="para"
+          />
+          <TypingEffect
+            texts={["Outside of that, I spend a lot of time at hackathons (5x winner), travelling, going on long walks, and tinkering with new ideas, usually turning them into projects."]}
+            typingSpeed={40}
+            rotationInterval={999999}
+            active={phase >= 3}
+            block
+            className="para"
+          />
 
         </div>
         <div className="heroVisual">

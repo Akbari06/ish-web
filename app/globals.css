@@ -165,7 +165,8 @@ header {
   font-weight: 800;
 }
 
-.heroCopy p {
+.heroCopy p,
+.heroCopy .para {
   color: var(--muted);
   font-size: 16px;
   line-height: 1.6;
