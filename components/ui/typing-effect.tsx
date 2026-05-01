@@ -74,7 +74,7 @@ export const TypingEffect = ({
     }
   }, [charIndex, currentText, started])
 
-  const showCursor = started && (block ? charIndex < currentText.length : true)
+  const showCursor = started && charIndex < currentText.length
 
   const cursor = showCursor ? (
     <motion.span
