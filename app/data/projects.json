@@ -13,7 +13,7 @@
     "title": "StoryGrow - 2nd Place Winner",
     "github": "https://github.com/Akbari06/storygrow",
     "points": [
-      "Agent based AI system generating illustrated stories from user input.",
+      "Agent based AI system generating illustrated stories from user input; had the chance to work with cool researchers, engineers, and salespeople from America, Germany, the UK, and Pakistan — all within 24 hours.",
       "Stack: FastAPI, Gemini API, Next.js, Google Cloud, Firebase."
     ]
   },
