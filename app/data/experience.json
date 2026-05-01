@@ -35,7 +35,7 @@
     ]
   },
   {
-    "range": "Apr 2025",
+    "range": "Apr 2025 — Apr 2026",
     "title": "Spring Insights",
     "companies": [
       { "name": "JPMorgan Chase", "logo": "/logos/jpmorgan.jpeg" },
@@ -43,9 +43,9 @@
       { "name": "Susquehanna", "logo": "/logos/susquehanna.jpeg" }
     ],
     "points": [
-      "Worked in a Scrum team during Code for Good, contributing to cloud based features for a nonprofit partner.",
-      "Selected from 12,500+ applicants and received a return offer for a 2026 Software Engineering Summer Analyst role.",
-      "Achieved 2nd highest PnL in a capital flow trading simulation during Technology in Investment Banking training.",
+      "Worked in a Scrum team during JPMC Code for Good, contributing to cloud based features for MCR Pathways (nonprofit partner).",
+      "Selected from 12,500+ applicants and received a return offer for JPMC for a 2026 Software Engineering Summer Analyst role.",
+      "Achieved 2nd highest PnL for DB in a capital flow trading simulation during Technology in Investment Banking training.",
       "Came 3rd in Susquehanna's sheep farming coding challenge."
     ]
   }
