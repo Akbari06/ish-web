@@ -153,13 +153,14 @@ export default function Home() {
           overflow: 'hidden',
           border: '1px solid var(--stroke)',
           boxShadow: 'var(--shadow)',
+          maxHeight: '480px',
         }}>
           <Image
-            src="/collage.jpg"
-            alt="collage"
+            src="/photo.png"
+            alt="Ishtiaque Akbar"
             width={3000}
             height={3000}
-            style={{ width: '100%', height: 'auto', display: 'block' }}
+            style={{ width: '100%', height: '480px', objectFit: 'cover', objectPosition: 'center 5%', display: 'block' }}
             draggable={false}
           />
         </div>
