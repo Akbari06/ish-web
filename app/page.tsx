@@ -103,7 +103,7 @@ export default function Home() {
         <h1>hi, i&apos;m ish</h1>
         <div className="roles">student<span>·</span>software engineer</div>
 
-        <p>just a guy from preston. living in london rn, was in munich before that.</p>
+        <p>just a guy from preston (if you&apos;ve heard of spudbros, you&apos;ll know). living in london rn, was in munich before that.</p>
         <p>
           i&apos;ve written code for{" "}
           <a href="https://about.google" target="_blank" rel="noopener noreferrer">google</a> and{" "}
