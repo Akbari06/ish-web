@@ -14,13 +14,5 @@
     "github": "https://github.com/Akbari06/storygrow",
     "story": "24 hours with a team from the us, germany, the uk and pakistan. we built a multi-agent system that turns a kid's idea into an illustrated story, with separate agents for emotion detection, planning, narrative and memory. shipped the backend on cloud run and came 2nd out of 400+.",
     "stack": "fastapi · gemini · next.js · cloud run · firestore"
-  },
-  {
-    "place": "hm",
-    "name": "pathmatch",
-    "event": "j.p. morgan code for good",
-    "github": "https://github.com/Akbari06/pathmatch",
-    "story": "built gemini-powered interview prep and mentor matching for mcr pathways, a charity supporting young people, cutting dropout 50% for esl youth. got an honourable mention, and it turned into a return offer.",
-    "stack": "react · django · gemini · sqlite"
   }
 ]
