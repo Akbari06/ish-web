@@ -135,8 +135,7 @@ export default function Home() {
                 <span className="t">{hack.name}</span>
                 <span className="event"> · {hack.event}</span>
                 <span className="story">{hack.story}</span>
-                <span className="stack">
-                  {hack.stack.split(" · ").map((tech) => <span key={tech}>{tech}</span>)}
+                <span className="repo">
                   <a href={hack.github} target="_blank" rel="noopener noreferrer">github →</a>
                 </span>
               </span>

@@ -4,15 +4,13 @@
     "name": "wellworld",
     "event": "great uni hack '25",
     "github": "https://github.com/Akbari06/wellworld",
-    "story": "planning a volunteering trip with a group is a mess of group chats and spreadsheets, so we built rooms where everyone plans it together in real time, on a 3d globe with flight routes across 80+ countries. took 1st in the google developer group track and 3rd in booking.com's, out of 200+ people.",
-    "stack": "react · globe.gl · fastapi · supabase · gemini"
+    "story": "planning a volunteering trip with a group is a mess of group chats and spreadsheets, so we built rooms where everyone plans it together in real time, on a 3d globe with flight routes across 80+ countries. took 1st in the google developer group track and 3rd in booking.com's, out of 200+ people."
   },
   {
     "place": "2nd",
     "name": "storygrow",
     "event": "odsc × google cloud",
     "github": "https://github.com/Akbari06/storygrow",
-    "story": "24 hours with a team from the us, germany, the uk and pakistan. we built a multi-agent system that turns a kid's idea into an illustrated story, with separate agents for emotion detection, planning, narrative and memory. shipped the backend on cloud run and came 2nd out of 400+.",
-    "stack": "fastapi · gemini · next.js · cloud run · firestore"
+    "story": "24 hours with a team from the us, germany, the uk and pakistan. we built a multi-agent system that turns a kid's idea into an illustrated story, with separate agents for emotion detection, planning, narrative and memory. shipped the backend on cloud run and came 2nd out of 400+."
   }
 ]
