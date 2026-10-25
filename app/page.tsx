@@ -14,6 +14,7 @@ type Entry = {
   description: string;
   now?: boolean;
   links?: Link[];
+  note?: string;
 };
 
 function joinLinks(links: Link[]) {
@@ -40,6 +41,7 @@ function DatedList({ items }: { items: Entry[] }) {
             <span className="s">
               {item.description}
               {item.links && <> {joinLinks(item.links)}.</>}
+              {item.note && <> {item.note}</>}
             </span>
           </span>
         </li>
