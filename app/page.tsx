@@ -77,7 +77,6 @@ export default function Home() {
             <a className="on" href="#top">/</a>
             <a href="#experience">experience</a>
             <a href="#education">education</a>
-            <a href="#thoughts">thoughts</a>
           </nav>
         </div>
       </header>
@@ -103,7 +102,7 @@ export default function Home() {
         <h1>hi, i&apos;m ish</h1>
         <div className="roles">student<span>·</span>software engineer</div>
 
-        <p>just a guy from preston (if you&apos;ve heard of spudbros, you&apos;ll know). living in london rn, was in munich before that.</p>
+        <p>someone from preston (if you&apos;ve heard of spudbros, you&apos;ll know). living in london rn, was in munich before that.</p>
         <p>
           i&apos;ve written code for{" "}
           <a href="https://about.google" target="_blank" rel="noopener noreferrer">google</a> and{" "}
@@ -125,14 +124,6 @@ export default function Home() {
 
         <h2 id="education">education</h2>
         <DatedList items={education as Entry[]} />
-
-        <h2 id="thoughts">thoughts <small>// coming soon</small></h2>
-        <ul className="dated">
-          <li>
-            <span className="d">--/--</span>
-            <span className="s">first post on its way.</span>
-          </li>
-        </ul>
 
         <footer>
           <span className="sign">welcome to my corner of the internet.</span>
