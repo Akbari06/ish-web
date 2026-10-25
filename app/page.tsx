@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import experience from "./data/experience.json";
 import education from "./data/education.json";
+import hackathons from "./data/hackathons.json";
 
 type Link = { name: string; url: string };
 type Entry = {
@@ -13,6 +14,7 @@ type Entry = {
   description: string;
   now?: boolean;
   links?: Link[];
+  note?: string;
 };
 
 function joinLinks(links: Link[]) {
@@ -39,6 +41,7 @@ function DatedList({ items }: { items: Entry[] }) {
             <span className="s">
               {item.description}
               {item.links && <> {joinLinks(item.links)}.</>}
+              {item.note && <> {item.note}</>}
             </span>
           </span>
         </li>
@@ -76,6 +79,7 @@ export default function Home() {
           <nav aria-label="Sections">
             <a className="on" href="#top">/</a>
             <a href="#experience">experience</a>
+            <a href="#hackathons">hackathons</a>
             <a href="#education">education</a>
           </nav>
         </div>
@@ -121,6 +125,24 @@ export default function Home() {
 
         <h2 id="experience">experience</h2>
         <DatedList items={experience as Entry[]} />
+
+        <h2 id="hackathons">hackathons</h2>
+        <ul className="dated hacks">
+          {hackathons.map((hack) => (
+            <li key={hack.name}>
+              <span className="place">{hack.place}</span>
+              <span>
+                <span className="t">{hack.name}</span>
+                <span className="event"> · {hack.event}</span>
+                <span className="story">{hack.story}</span>
+                <span className="stack">
+                  {hack.stack.split(" · ").map((tech) => <span key={tech}>{tech}</span>)}
+                  <a href={hack.github} target="_blank" rel="noopener noreferrer">github →</a>
+                </span>
+              </span>
+            </li>
+          ))}
+        </ul>
 
         <h2 id="education">education</h2>
         <DatedList items={education as Entry[]} />
